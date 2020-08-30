@@ -1,12 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/" class="aaa">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <H />
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+
+<script>
+import H from '../src/components/HelloWorld.vue'
+export default {
+  name: 'App',
+  components: { H },
+  data() {
+    return {
+
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
