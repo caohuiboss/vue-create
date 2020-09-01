@@ -31,18 +31,6 @@ module.exports = {
       }
     }
   },
-  css: {
-    loaderOptions: {
-      less: {
-        modifyVars: {
-          'primary-color': '#FFB841',
-          'border-color-base': '#dddddd',
-          'border-radius-base': '4px'
-        },
-        javascriptEnabled: true
-      }
-    }
-  },
   configureWebpack: {
     resolve: {
       alias: {
@@ -99,6 +87,7 @@ module.exports = {
                 antdUI: {
                   name: 'chunk-antdUI',
                   priority: 20,
+                  // 此处得注意，我是因为用的 adtdv，路径如此，如果用其他UI框架请看 node_modules 中该UI组件库是啥路径
                   test: /[\\/]node_modules[\\/]_?ant-design-vue(.*)/
                 }
               }
